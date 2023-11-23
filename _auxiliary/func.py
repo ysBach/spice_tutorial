@@ -1,50 +1,33 @@
-# Import the modules
-import datetime
-import pathlib
+from pathlib import Path
 import urllib.request
-import os
+
+__all__ = ['download_file', 'add_col2tab']
 
 
-import numpy as np
-import spiceypy
-
-#%%
-
-# We define a function that is useful for downloading files. Some files, like
-# SPICE kernel files, are large and cannot be uploaded on the GitHub
-# repository. Thus, this helper function shall support you for the future
-# file and kernel management (if needed).
 def download_file(dl_path, dl_url):
-    """
-    download_file(DL_PATH, DL_URL)
-
-    This helper function supports one to download files from the Internet and
-    stores them in a local directory.
+    """ Download files from the Internet.
 
     Parameters
     ----------
-    DL_PATH : str
+    dl_path : str
         Download path on the local machine, relative to this function.
-    DL_URL : str
+    dl_url : str
         Download url of the requested file.
     """
 
-    # Obtain the file name from the url string. The url is split at
-    # the "/", thus the very last entry of the resulting list is the file's
-    # name
+    # Make directory if it does not exist
+    dl_path = Path(dl_path)
+    dl_path.mkdir(parents=True, exist_ok=True)
+    # Get the file name from the url
     file_name = dl_url.split('/')[-1]
 
-    # Create necessary sub-directories in the DL_PATH direction (if not
-    # existing)
-    pathlib.Path(dl_path).mkdir(parents=True, exist_ok=True)
-
     # If the file is not present in the download directory -> download it
-    if not os.path.isfile(dl_path + file_name):
-
+    if not (dl_path/file_name).exists():
         # Download the file with the urllib  package
-        urllib.request.urlretrieve(dl_url, dl_path + file_name)
+        urllib.request.urlretrieve(dl_url, dl_path/file_name)
 
-#%%
+
+# %%
 
 # We define a function to add a new column in an already existing database
 # table. This code snippet may be helpful in the future
@@ -83,6 +66,6 @@ def add_col2tab(con_db, cur_db, tab_name, col_name, col_type):
 
     # If the column is not existing yet, add the new column
     else:
-        cur_db.execute(f'ALTER TABLE {tab_name} ' \
+        cur_db.execute(f'ALTER TABLE {tab_name} '
                        f'ADD COLUMN {col_name} {col_type}')
         con_db.commit()
