@@ -12,12 +12,15 @@ Then I found [``Space Science Tutorial`` repo by Thomas Albin](https://github.co
 1. Part 06: Calculating the "state vectors", orbital elements, conversion matrix between reference frames (``ECLIPJ2000``), and orbit of an NEO.
 1. *(Part 07: Merged into Part 08)*
 1. Part 08: Query the IAUMPC comets DB, add some info, and save as a SQL DB
-1. *(Part 09: Omitted because it's a simple visualization that can be fun for students)*
+1. *(Part 09: Omitted ∵ it's a simple visualization that can be fun for students)*
 1. Part 10: A practice to calculate the T_Jup parameter in e-i space for different a, make a GIF.
-1. *(Part 11: Omitted because it's a simple visualization that can be fun for students)*
-1. *(Part 12: Omitted because it's a simple visualization that can b fun for students)*
+1. *(Part 11: Omitted ∵ it's a simple visualization that can be fun for students)*
+1. *(Part 12: Omitted ∵ it's a simple visualization that can b fun for students)*
 1. Part 13: 67P orbital (osculating) elements calculation near Jupiter encounter, compare with IAUMPC.
 1. Part 14: Finding close-approach time by ``gfdist`` and simple note on the "insufficient ephemeris" error.
+1. Part 15: Minimum orbit intersection distance (MOID) of a comet.
+1. *(Part 16: Omitted ∵ it's about magnitude system, not related to SPICE)*
+
 
 
 Later, I may try looking into their youtube materials and merging them here.
