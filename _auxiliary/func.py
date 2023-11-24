@@ -1,7 +1,16 @@
 from pathlib import Path
 import urllib.request
+import spiceypy as sp
 
 __all__ = ['download_file', 'add_col2tab']
+
+
+KM2AU = sp.convrt(1, "km", "au")
+RAD2DEG = sp.dpr()
+SEC2YR = sp.convrt(1, "seconds", "years")
+
+GM_SUN = sp.bodvcd(bodyid=10, item='GM', maxn=1)[1][0]
+GM_JUP = sp.bodvcd(bodyid=5, item='GM', maxn=1)[1][0]
 
 
 def download_file(dl_path, dl_url):
