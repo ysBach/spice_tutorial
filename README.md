@@ -12,7 +12,7 @@ This is forked from the [``Space Science Tutorial`` repo by Thomas Albin](https:
 1. Part 10: A practice to calculate T_Jup parameter in e-i space for different a, make a GIF.
 1. *(Part 11: Omitted because it's a simple visualization that maybe fun for students)*
 1. *(Part 12: Omitted because it's a simple visualization that maybe fun for students)*
-1. Part 13
+1. Part 13: 67P orbital (osculating) elements calculation near Jupiter encounter, compare with IAUMPC.
 Among them, I skipped Parts 09/11/12 (simple visualization that maybe fun for students)
 
 If you are a beginner in python, I think their original materials and exhaustive "medium" articles will be great learning material for you.
