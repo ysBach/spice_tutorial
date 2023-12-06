@@ -20,6 +20,12 @@ Then I found [``Space Science Tutorial`` repo by Thomas Albin](https://github.co
 1. Part 14: Finding close-approach time by ``gfdist`` and simple note on the "insufficient ephemeris" error.
 1. Part 15: Minimum orbit intersection distance (MOID) of a comet.
 1. *(Part 16: Omitted ∵ it's about magnitude system, not related to SPICE)*
+1. Part 17: Orbit uncertainty by tracing multiple samples
+1. *(Part 18: Omitted ∵ it's more about statistics)*
+1. *(Part 19: Merged into Part 20)*
+1. Part 20: Movement of Ceres over time on Ecliptic lon-lat space.
+1. *(Part 21-23: Omitted ∵ it's more about python packaging, not related to SPICE)*
+
 
 
 
