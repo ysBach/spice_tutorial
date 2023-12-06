@@ -6,7 +6,9 @@ __all__ = ['download_file', 'add_col2tab']
 
 
 KM2AU = sp.convrt(1, "km", "au")
-RAD2DEG = sp.dpr()
+AU2KM = sp.convrt(1, "au", "km")
+R2D = sp.dpr()
+D2R = sp.rpd()
 SEC2YR = sp.convrt(1, "seconds", "years")
 
 GM_SUN = sp.bodvcd(bodyid=10, item='GM', maxn=1)[1][0]
